@@ -67,13 +67,11 @@ class _HomeDrawerState extends State<HomeDrawer> {
   @override
   Widget build(BuildContext context) {
     var loggedContainer = Container(
-      width: double.infinity,
-      height: 230,
-      padding: const EdgeInsets.only(top: 40.0),
-      child:
-      LoggedUser (iconAnimationController:widget.iconAnimationController)
-
-    );
+        width: double.infinity,
+        height: 230,
+        padding: const EdgeInsets.only(top: 40.0),
+        child: LoggedUser(
+            iconAnimationController: widget.iconAnimationController));
     return Scaffold(
       backgroundColor: AppTheme.notWhite.withOpacity(0.5),
       body: Column(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../filters_screen.dart';
+import '../filter/filters_screen.dart';
 import '../hotel_app_theme.dart';
 
 class FilterBarUI extends StatefulWidget {

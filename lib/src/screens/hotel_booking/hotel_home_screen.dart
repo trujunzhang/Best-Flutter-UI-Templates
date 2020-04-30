@@ -3,7 +3,7 @@ import 'package:best_flutter_ui_templates/src/screens/hotel_booking/body/hotel_l
 import 'package:best_flutter_ui_templates/src/screens/hotel_booking/model/hotel_list_data.dart';
 import 'package:flutter/material.dart';
 import 'body/page_body.dart';
-import 'filters_screen.dart';
+import 'filter/filters_screen.dart';
 import 'hotel_app_theme.dart';
 import 'widget/app_bar_ui.dart';
 import 'widget/filter_bar_ui.dart';

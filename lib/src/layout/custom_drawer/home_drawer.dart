@@ -64,8 +64,9 @@ class _HomeDrawerState extends State<HomeDrawer> {
 
   @override
   Widget build(BuildContext context) {
-    var container = Container(
+    var loggedContainer = Container(
       width: double.infinity,
+      height: 230,
       padding: const EdgeInsets.only(top: 40.0),
       child: Container(
         padding: const EdgeInsets.all(16.0),
@@ -130,7 +131,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          container,
+          loggedContainer,
           const SizedBox(
             height: 4,
           ),

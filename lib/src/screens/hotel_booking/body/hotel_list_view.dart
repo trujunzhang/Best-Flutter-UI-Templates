@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
-import 'model/hotel_list_data.dart';
+import '../model/hotel_list_data.dart';
 
 class HotelListView extends StatelessWidget {
   const HotelListView(

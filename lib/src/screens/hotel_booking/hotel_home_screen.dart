@@ -1,7 +1,8 @@
 import 'dart:ui';
-import 'package:best_flutter_ui_templates/src/screens/hotel_booking/hotel_list_view.dart';
+import 'package:best_flutter_ui_templates/src/screens/hotel_booking/body/hotel_list_view.dart';
 import 'package:best_flutter_ui_templates/src/screens/hotel_booking/model/hotel_list_data.dart';
 import 'package:flutter/material.dart';
+import 'body/page_body.dart';
 import 'filters_screen.dart';
 import 'hotel_app_theme.dart';
 import 'widget/app_bar_ui.dart';
@@ -59,58 +60,34 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                     AppBarUI(),
                     Expanded(
                       child: NestedScrollView(
-                        controller: _scrollController,
-                        headerSliverBuilder:
-                            (BuildContext context, bool innerBoxIsScrolled) {
-                          return <Widget>[
-                            SliverList(
-                              delegate: SliverChildBuilderDelegate(
-                                  (BuildContext context, int index) {
-                                return Column(
-                                  children: <Widget>[
-                                    SearchBarUI(),
-                                    TimeDateUI(),
-                                  ],
-                                );
-                              }, childCount: 1),
-                            ),
-                            SliverPersistentHeader(
-                              pinned: true,
-                              floating: true,
-                              delegate: ContestTabHeader(
-                                FilterBarUI(),
+                          controller: _scrollController,
+                          headerSliverBuilder:
+                              (BuildContext context, bool innerBoxIsScrolled) {
+                            return <Widget>[
+                              SliverList(
+                                delegate: SliverChildBuilderDelegate(
+                                    (BuildContext context, int index) {
+                                  return Column(
+                                    children: <Widget>[
+                                      SearchBarUI(),
+                                      TimeDateUI(),
+                                    ],
+                                  );
+                                }, childCount: 1),
                               ),
-                            ),
-                          ];
-                        },
-                        body: Container(
-                          color:
-                              HotelAppTheme.buildLightTheme().backgroundColor,
-                          child: ListView.builder(
-                            itemCount: hotelList.length,
-                            padding: const EdgeInsets.only(top: 8),
-                            scrollDirection: Axis.vertical,
-                            itemBuilder: (BuildContext context, int index) {
-                              final int count =
-                                  hotelList.length > 10 ? 10 : hotelList.length;
-                              final Animation<double> animation =
-                                  Tween<double>(begin: 0.0, end: 1.0).animate(
-                                      CurvedAnimation(
-                                          parent: animationController,
-                                          curve: Interval(
-                                              (1 / count) * index, 1.0,
-                                              curve: Curves.fastOutSlowIn)));
-                              animationController.forward();
-                              return HotelListView(
-                                callback: () {},
-                                hotelData: hotelList[index],
-                                animation: animation,
-                                animationController: animationController,
-                              );
-                            },
-                          ),
-                        ),
-                      ),
+                              SliverPersistentHeader(
+                                pinned: true,
+                                floating: true,
+                                delegate: ContestTabHeader(
+                                  FilterBarUI(),
+                                ),
+                              ),
+                            ];
+                          },
+                          body: PageBody(
+                            hotelList: hotelList,
+                            animationController: animationController,
+                          )),
                     )
                   ],
                 ),

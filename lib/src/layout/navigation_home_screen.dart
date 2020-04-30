@@ -1,3 +1,4 @@
+import 'package:best_flutter_ui_templates/src/screens/fitness_app/fitness_app_home_screen.dart';
 import 'package:best_flutter_ui_templates/src/screens/home/home_screen.dart';
 import 'package:best_flutter_ui_templates/src/layout/app_theme.dart';
 import 'package:best_flutter_ui_templates/src/layout/custom_drawer/drawer_user_controller.dart';
@@ -6,6 +7,7 @@ import 'package:best_flutter_ui_templates/src/layout/sidebar/feedback_screen.dar
 import 'package:best_flutter_ui_templates/src/layout/sidebar/help_screen.dart';
 import 'package:best_flutter_ui_templates/src/layout/sidebar/invite_friend_screen.dart';
 import 'package:best_flutter_ui_templates/src/screens/design_course/home_design_course.dart';
+import 'package:best_flutter_ui_templates/src/screens/hotel_booking/hotel_home_screen.dart';
 import 'package:flutter/material.dart';
 
 class NavigationHomeScreen extends StatefulWidget {
@@ -20,10 +22,10 @@ class _NavigationHomeScreenState extends State<NavigationHomeScreen> {
   @override
   void initState() {
     drawerIndex = DrawerIndex.HOME;
-    screenView = const MyHomePage();
-    // screenView = HotelHomeScreen();
-    // screenView = FitnessAppHomeScreen();
-    // screenView = DesignCourseHomeScreen();
+//    screenView = const MyHomePage();
+     screenView = HotelHomeScreen();
+//     screenView = FitnessAppHomeScreen();
+//     screenView = DesignCourseHomeScreen();
 
     super.initState();
   }

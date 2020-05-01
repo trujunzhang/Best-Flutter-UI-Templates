@@ -1,14 +1,13 @@
-
 import 'package:best_flutter_ui_templates/src/layout/model/homelist.dart';
 import 'package:flutter/material.dart';
 
 class HomeListView extends StatelessWidget {
   const HomeListView(
       {Key key,
-        this.listData,
-        this.callBack,
-        this.animationController,
-        this.animation})
+      this.listData,
+      this.callBack,
+      this.animationController,
+      this.animation})
       : super(key: key);
 
   final HomeList listData;
@@ -42,7 +41,7 @@ class HomeListView extends StatelessWidget {
                       child: InkWell(
                         splashColor: Colors.grey.withOpacity(0.2),
                         borderRadius:
-                        const BorderRadius.all(Radius.circular(4.0)),
+                            const BorderRadius.all(Radius.circular(4.0)),
                         onTap: () {
                           callBack();
                         },
@@ -58,4 +57,3 @@ class HomeListView extends StatelessWidget {
     );
   }
 }
-

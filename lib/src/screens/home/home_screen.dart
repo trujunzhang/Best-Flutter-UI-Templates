@@ -2,6 +2,7 @@ import 'package:best_flutter_ui_templates/src/layout/app_theme.dart';
 import 'package:best_flutter_ui_templates/src/layout/model/homelist.dart';
 import 'package:flutter/material.dart';
 
+import 'home_appbar.dart';
 import 'home_listView.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -50,7 +51,13 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  appBar(),
+                  HomeAppBar(
+                      multiple: multiple,
+                      onIconClick: () {
+                        setState(() {
+                          multiple = !multiple;
+                        });
+                      }),
                   Expanded(
                     child: FutureBuilder<bool>(
                       future: getData(),
@@ -110,63 +117,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             );
           }
         },
-      ),
-    );
-  }
-
-  Widget appBar() {
-    return SizedBox(
-      height: AppBar().preferredSize.height,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(top: 8, left: 8),
-            child: Container(
-              width: AppBar().preferredSize.height - 8,
-              height: AppBar().preferredSize.height - 8,
-            ),
-          ),
-          Expanded(
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 4),
-                child: Text(
-                  'Flutter UI',
-                  style: TextStyle(
-                    fontSize: 22,
-                    color: AppTheme.darkText,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 8, right: 8),
-            child: Container(
-              width: AppBar().preferredSize.height - 8,
-              height: AppBar().preferredSize.height - 8,
-              color: Colors.white,
-              child: Material(
-                color: Colors.transparent,
-                child: InkWell(
-                  borderRadius:
-                      BorderRadius.circular(AppBar().preferredSize.height),
-                  child: Icon(
-                    multiple ? Icons.dashboard : Icons.view_agenda,
-                    color: AppTheme.dark_grey,
-                  ),
-                  onTap: () {
-                    setState(() {
-                      multiple = !multiple;
-                    });
-                  },
-                ),
-              ),
-            ),
-          ),
-        ],
       ),
     );
   }

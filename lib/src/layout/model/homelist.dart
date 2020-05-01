@@ -1,6 +1,6 @@
-import 'package:best_flutter_ui_templates/src/screens/design_course/home_design_course.dart';
-import 'package:best_flutter_ui_templates/src/screens/fitness_app/fitness_app_home_screen.dart';
-import 'package:best_flutter_ui_templates/src/screens/hotel_booking/hotel_home_screen.dart';
+import 'package:ieatta/src/screens/design_course/home_design_course.dart';
+import 'package:ieatta/src/screens/fitness_app/fitness_app_home_screen.dart';
+import 'package:ieatta/src/screens/hotel_booking/hotel_home_screen.dart';
 import 'package:flutter/widgets.dart';
 
 class HomeList {

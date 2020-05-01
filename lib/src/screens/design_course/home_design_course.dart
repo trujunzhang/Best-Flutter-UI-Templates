@@ -1,7 +1,7 @@
-import 'package:best_flutter_ui_templates/src/screens/design_course/category_list_view.dart';
-import 'package:best_flutter_ui_templates/src/screens/design_course/course_info_screen.dart';
-import 'package:best_flutter_ui_templates/src/screens/design_course/popular_course_list_view.dart';
-import 'package:best_flutter_ui_templates/main.dart';
+import 'package:ieatta/src/screens/design_course/category_list_view.dart';
+import 'package:ieatta/src/screens/design_course/course_info_screen.dart';
+import 'package:ieatta/src/screens/design_course/popular_course_list_view.dart';
+import 'package:ieatta/main.dart';
 import 'package:flutter/material.dart';
 import 'design_course_app_theme.dart';
 

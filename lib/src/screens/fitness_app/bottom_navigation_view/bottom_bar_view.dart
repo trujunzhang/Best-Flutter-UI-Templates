@@ -1,7 +1,7 @@
 import 'dart:math' as math;
-import 'package:best_flutter_ui_templates/src/screens/fitness_app/fintness_app_theme.dart';
-import 'package:best_flutter_ui_templates/src/screens/fitness_app/models/tabIcon_data.dart';
-import 'package:best_flutter_ui_templates/main.dart';
+import 'package:ieatta/src/screens/fitness_app/fintness_app_theme.dart';
+import 'package:ieatta/src/screens/fitness_app/models/tabIcon_data.dart';
+import 'package:ieatta/main.dart';
 import 'package:flutter/material.dart';
 
 import '../models/tabIcon_data.dart';

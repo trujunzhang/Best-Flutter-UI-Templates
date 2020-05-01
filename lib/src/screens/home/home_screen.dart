@@ -1,5 +1,5 @@
-import 'package:best_flutter_ui_templates/src/layout/app_theme.dart';
-import 'package:best_flutter_ui_templates/src/layout/model/homelist.dart';
+import 'package:ieatta/src/layout/app_theme.dart';
+import 'package:ieatta/src/layout/model/homelist.dart';
 import 'package:flutter/material.dart';
 
 import 'home_appbar.dart';

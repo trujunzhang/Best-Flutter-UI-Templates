@@ -1,5 +1,5 @@
-import 'package:best_flutter_ui_templates/src/layout/app_theme.dart';
-import 'package:best_flutter_ui_templates/src/layout/custom_drawer/home_drawer.dart';
+import 'package:ieatta/src/layout/app_theme.dart';
+import 'package:ieatta/src/layout/custom_drawer/home_drawer.dart';
 import 'package:flutter/material.dart';
 
 class DrawerUserController extends StatefulWidget {

@@ -1,4 +1,4 @@
-import 'package:best_flutter_ui_templates/src/layout/model/homelist.dart';
+import 'package:ieatta/src/layout/model/homelist.dart';
 import 'package:flutter/material.dart';
 
 class HomeListView extends StatelessWidget {

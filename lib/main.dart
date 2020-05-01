@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:best_flutter_ui_templates/src/layout/app_theme.dart';
+import 'package:ieatta/src/layout/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'src/layout/navigation_home_screen.dart';

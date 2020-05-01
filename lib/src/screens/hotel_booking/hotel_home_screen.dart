@@ -1,6 +1,6 @@
 import 'dart:ui';
-import 'package:best_flutter_ui_templates/src/screens/hotel_booking/body/hotel_list_view.dart';
-import 'package:best_flutter_ui_templates/src/screens/hotel_booking/model/hotel_list_data.dart';
+import 'package:ieatta/src/screens/hotel_booking/body/hotel_list_view.dart';
+import 'package:ieatta/src/screens/hotel_booking/model/hotel_list_data.dart';
 import 'package:flutter/material.dart';
 import 'body/page_body.dart';
 import 'filter/filters_screen.dart';

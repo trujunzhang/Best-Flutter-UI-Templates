@@ -1,7 +1,7 @@
-import 'package:best_flutter_ui_templates/src/screens/fitness_app/ui_view/area_list_view.dart';
-import 'package:best_flutter_ui_templates/src/screens/fitness_app/ui_view/running_view.dart';
-import 'package:best_flutter_ui_templates/src/screens/fitness_app/ui_view/title_view.dart';
-import 'package:best_flutter_ui_templates/src/screens/fitness_app/ui_view/workout_view.dart';
+import 'package:ieatta/src/screens/fitness_app/ui_view/area_list_view.dart';
+import 'package:ieatta/src/screens/fitness_app/ui_view/running_view.dart';
+import 'package:ieatta/src/screens/fitness_app/ui_view/title_view.dart';
+import 'package:ieatta/src/screens/fitness_app/ui_view/workout_view.dart';
 import 'package:flutter/material.dart';
 
 import '../fintness_app_theme.dart';

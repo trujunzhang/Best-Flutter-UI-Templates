@@ -1,5 +1,6 @@
-import 'package:ieatta/src/layout/model/homelist.dart';
 import 'package:flutter/material.dart';
+
+import 'model/homelist.dart';
 
 class HomeListView extends StatelessWidget {
   const HomeListView(

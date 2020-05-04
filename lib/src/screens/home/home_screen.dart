@@ -1,6 +1,7 @@
 import 'package:ieatta/src/layout/app_theme.dart';
-import 'package:ieatta/src/layout/model/homelist.dart';
 import 'package:flutter/material.dart';
+
+import 'model/homelist.dart';
 
 import 'home_appbar.dart';
 import 'home_listView.dart';

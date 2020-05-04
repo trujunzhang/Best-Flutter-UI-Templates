@@ -2,6 +2,8 @@ import 'package:ieatta/src/layout/app_theme.dart';
 import 'package:ieatta/src/layout/custom_drawer/home_drawer.dart';
 import 'package:flutter/material.dart';
 
+import 'draw_model.dart';
+
 class DrawerUserController extends StatefulWidget {
   const DrawerUserController({
     Key key,

@@ -1,6 +1,7 @@
 import 'package:ieatta/src/layout/app_theme.dart';
 import 'package:flutter/material.dart';
 
+import 'draw_model.dart';
 import 'login/logged_user.dart';
 
 class HomeDrawer extends StatefulWidget {
@@ -20,48 +21,11 @@ class HomeDrawer extends StatefulWidget {
 }
 
 class _HomeDrawerState extends State<HomeDrawer> {
-  List<DrawerList> drawerList;
+  List<DrawerList> drawerList = DrawerList.getDrawerListArray();
 
   @override
   void initState() {
-    setdDrawerListArray();
     super.initState();
-  }
-
-  void setdDrawerListArray() {
-    drawerList = <DrawerList>[
-      DrawerList(
-        index: DrawerIndex.HOME,
-        labelName: 'Home',
-        icon: Icon(Icons.home),
-      ),
-      DrawerList(
-        index: DrawerIndex.Help,
-        labelName: 'Help',
-        isAssetsImage: true,
-        imageName: 'assets/images/supportIcon.png',
-      ),
-      DrawerList(
-        index: DrawerIndex.FeedBack,
-        labelName: 'FeedBack',
-        icon: Icon(Icons.help),
-      ),
-      DrawerList(
-        index: DrawerIndex.Invite,
-        labelName: 'Invite Friend',
-        icon: Icon(Icons.group),
-      ),
-      DrawerList(
-        index: DrawerIndex.Share,
-        labelName: 'Rate the app',
-        icon: Icon(Icons.share),
-      ),
-      DrawerList(
-        index: DrawerIndex.About,
-        labelName: 'About Us',
-        icon: Icon(Icons.info),
-      ),
-    ];
   }
 
   @override
@@ -223,30 +187,4 @@ class _HomeDrawerState extends State<HomeDrawer> {
   Future<void> navigationtoScreen(DrawerIndex indexScreen) async {
     widget.callBackIndex(indexScreen);
   }
-}
-
-enum DrawerIndex {
-  HOME,
-  FeedBack,
-  Help,
-  Share,
-  About,
-  Invite,
-  Testing,
-}
-
-class DrawerList {
-  DrawerList({
-    this.isAssetsImage = false,
-    this.labelName = '',
-    this.icon,
-    this.index,
-    this.imageName = '',
-  });
-
-  String labelName;
-  Icon icon;
-  bool isAssetsImage;
-  String imageName;
-  DrawerIndex index;
 }

@@ -10,6 +10,8 @@ import 'package:ieatta/src/screens/hotel_booking/hotel_home_screen.dart';
 import 'package:ieatta/src/screens/fitness_app/fitness_app_home_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'custom_drawer/draw_model.dart';
+
 class NavigationHomeScreen extends StatefulWidget {
   @override
   _NavigationHomeScreenState createState() => _NavigationHomeScreenState();
@@ -42,8 +44,8 @@ class _NavigationHomeScreenState extends State<NavigationHomeScreen> {
           body: DrawerUserController(
             screenIndex: drawerIndex,
             drawerWidth: MediaQuery.of(context).size.width * 0.75,
-            onDrawerCall: (DrawerIndex drawerIndexdata) {
-              changeIndex(drawerIndexdata);
+            onDrawerCall: (DrawerIndex drawerIndexData) {
+              changeIndex(drawerIndexData);
               //callback from drawer for replace screen as user need with passing DrawerIndex(Enum index)
             },
             screenView: screenView,
@@ -54,12 +56,12 @@ class _NavigationHomeScreenState extends State<NavigationHomeScreen> {
     );
   }
 
-  void changeIndex(DrawerIndex drawerIndexdata) {
-    if (drawerIndex != drawerIndexdata) {
-      drawerIndex = drawerIndexdata;
+  void changeIndex(DrawerIndex drawerIndexData) {
+    if (drawerIndex != drawerIndexData) {
+      drawerIndex = drawerIndexData;
       if (drawerIndex == DrawerIndex.HOME) {
         setState(() {
-          screenView = const MyHomePage();
+          screenView = MyHomePage();
         });
       } else if (drawerIndex == DrawerIndex.Help) {
         setState(() {

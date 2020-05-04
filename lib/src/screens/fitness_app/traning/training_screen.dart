@@ -10,6 +10,7 @@ class TrainingScreen extends StatefulWidget {
   const TrainingScreen({Key key, this.animationController}) : super(key: key);
 
   final AnimationController animationController;
+
   @override
   _TrainingScreenState createState() => _TrainingScreenState();
 }

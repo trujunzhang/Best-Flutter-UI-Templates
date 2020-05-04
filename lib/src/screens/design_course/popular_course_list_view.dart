@@ -1,12 +1,13 @@
 import 'package:ieatta/src/screens/design_course/design_course_app_theme.dart';
 import 'package:ieatta/src/screens/design_course/models/category.dart';
-import 'package:ieatta/main.dart';
+import 'package:ieatta/src/utils/hex_color.dart';
 import 'package:flutter/material.dart';
 
 class PopularCourseListView extends StatefulWidget {
   const PopularCourseListView({Key key, this.callBack}) : super(key: key);
 
   final Function callBack;
+
   @override
   _PopularCourseListViewState createState() => _PopularCourseListViewState();
 }
@@ -14,6 +15,7 @@ class PopularCourseListView extends StatefulWidget {
 class _PopularCourseListViewState extends State<PopularCourseListView>
     with TickerProviderStateMixin {
   AnimationController animationController;
+
   @override
   void initState() {
     animationController = AnimationController(

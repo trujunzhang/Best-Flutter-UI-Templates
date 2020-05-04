@@ -1,4 +1,4 @@
-import 'package:ieatta/main.dart';
+import 'package:ieatta/src/utils/hex_color.dart';
 import 'package:flutter/material.dart';
 
 import '../fintness_app_theme.dart';
@@ -9,6 +9,7 @@ class GlassView extends StatelessWidget {
 
   const GlassView({Key key, this.animationController, this.animation})
       : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(

@@ -9,6 +9,7 @@ class AreaListView extends StatefulWidget {
 
   final AnimationController mainScreenAnimationController;
   final Animation<dynamic> mainScreenAnimation;
+
   @override
   _AreaListViewState createState() => _AreaListViewState();
 }

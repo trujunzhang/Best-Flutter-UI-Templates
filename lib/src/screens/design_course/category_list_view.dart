@@ -1,12 +1,13 @@
 import 'package:ieatta/src/screens/design_course/design_course_app_theme.dart';
 import 'package:ieatta/src/screens/design_course/models/category.dart';
-import 'package:ieatta/main.dart';
 import 'package:flutter/material.dart';
+import 'package:ieatta/src/utils/hex_color.dart';
 
 class CategoryListView extends StatefulWidget {
   const CategoryListView({Key key, this.callBack}) : super(key: key);
 
   final Function callBack;
+
   @override
   _CategoryListViewState createState() => _CategoryListViewState();
 }

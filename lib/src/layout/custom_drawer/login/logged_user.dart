@@ -23,6 +23,7 @@ class _LoggedUserState extends State<LoggedUser> {
             AnimatedBuilder(
               animation: widget.iconAnimationController,
               builder: (BuildContext context, Widget child) {
+                var image = Image.asset('assets/images/userImage.png');
                 return ScaleTransition(
                   scale: AlwaysStoppedAnimation<double>(
                       1.0 - (widget.iconAnimationController.value) * 0.2),
@@ -49,7 +50,7 @@ class _LoggedUserState extends State<LoggedUser> {
                       child: ClipRRect(
                         borderRadius:
                             const BorderRadius.all(Radius.circular(60.0)),
-                        child: Image.asset('assets/images/userImage.png'),
+                        child: image,
                       ),
                     ),
                   ),

@@ -405,8 +405,8 @@ class MediterranesnDietView extends StatelessWidget {
                                       fontFamily: FitnessAppTheme.fontName,
                                       fontWeight: FontWeight.w600,
                                       fontSize: 12,
-                                      color: FitnessAppTheme.grey
-                                          .withOpacity(0.5),
+                                      color:
+                                          FitnessAppTheme.grey.withOpacity(0.5),
                                     ),
                                   ),
                                 ),

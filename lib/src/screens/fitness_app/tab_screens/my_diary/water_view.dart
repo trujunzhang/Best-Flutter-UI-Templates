@@ -75,8 +75,7 @@ class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                                           fontFamily: FitnessAppTheme.fontName,
                                           fontWeight: FontWeight.w600,
                                           fontSize: 32,
-                                          color:
-                                              FitnessAppTheme.nearlyDarkBlue,
+                                          color: FitnessAppTheme.nearlyDarkBlue,
                                         ),
                                       ),
                                     ),
@@ -91,8 +90,7 @@ class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                                           fontWeight: FontWeight.w500,
                                           fontSize: 18,
                                           letterSpacing: -0.2,
-                                          color:
-                                              FitnessAppTheme.nearlyDarkBlue,
+                                          color: FitnessAppTheme.nearlyDarkBlue,
                                         ),
                                       ),
                                     ),

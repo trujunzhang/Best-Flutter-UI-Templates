@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:ieatta/src/screens/fitness_app/bottom_navigation_view/tabIcon_data.dart';
 
@@ -22,12 +21,12 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
       vsync: this,
       duration: const Duration(milliseconds: 400),
     )..addStatusListener((AnimationStatus status) {
-      if (status == AnimationStatus.completed) {
-        if (!mounted) return;
-        widget.removeAllSelect();
-        widget.tabIconData.animationController.reverse();
-      }
-    });
+        if (status == AnimationStatus.completed) {
+          if (!mounted) return;
+          widget.removeAllSelect();
+          widget.tabIconData.animationController.reverse();
+        }
+      });
     super.initState();
   }
 
@@ -60,7 +59,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                       CurvedAnimation(
                           parent: widget.tabIconData.animationController,
                           curve:
-                          Interval(0.1, 1.0, curve: Curves.fastOutSlowIn))),
+                              Interval(0.1, 1.0, curve: Curves.fastOutSlowIn))),
                   child: Image.asset(widget.tabIconData.isSelected
                       ? widget.tabIconData.selectedImagePath
                       : widget.tabIconData.imagePath),
@@ -136,4 +135,3 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
     );
   }
 }
-

@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 
 import '../../fitness_app_theme.dart';
 
-
 class TrainingScreen extends StatefulWidget {
   const TrainingScreen({Key key, this.animationController}) : super(key: key);
 

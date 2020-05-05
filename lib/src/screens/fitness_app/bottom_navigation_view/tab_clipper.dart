@@ -48,4 +48,3 @@ class TabClipper extends CustomClipper<Path> {
     return redian;
   }
 }
-

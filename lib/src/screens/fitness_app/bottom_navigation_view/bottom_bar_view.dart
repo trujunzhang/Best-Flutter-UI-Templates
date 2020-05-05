@@ -1,9 +1,9 @@
 import 'package:ieatta/src/screens/fitness_app/fitness_app_theme.dart';
-import 'package:ieatta/src/screens/fitness_app/models/tabIcon_data.dart';
+import 'package:ieatta/src/screens/fitness_app/bottom_navigation_view/tabIcon_data.dart';
 import 'package:ieatta/src/utils/hex_color.dart';
 import 'package:flutter/material.dart';
 
-import '../models/tabIcon_data.dart';
+import 'tabIcon_data.dart';
 import 'tab_clipper.dart';
 import 'tab_icons.dart';
 

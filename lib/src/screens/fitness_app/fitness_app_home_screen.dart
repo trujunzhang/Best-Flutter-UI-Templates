@@ -1,4 +1,4 @@
-import 'package:ieatta/src/screens/fitness_app/models/tabIcon_data.dart';
+import 'package:ieatta/src/screens/fitness_app/bottom_navigation_view/tabIcon_data.dart';
 import 'package:ieatta/src/screens/fitness_app/traning/training_screen.dart';
 import 'package:flutter/material.dart';
 import 'bottom_navigation_view/bottom_bar_view.dart';

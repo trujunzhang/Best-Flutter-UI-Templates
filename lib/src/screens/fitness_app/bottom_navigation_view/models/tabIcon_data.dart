@@ -16,7 +16,7 @@ class TabIconData {
 
   AnimationController animationController;
 
-  static List<TabIconData> resetTabIconsList (){
+  static List<TabIconData> resetTabIconsList() {
     List<TabIconData> list = tabIconsList;
     list.forEach((TabIconData tab) {
       tab.isSelected = false;

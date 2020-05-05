@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'dart:math' as math;
+
+import 'package:flutter/material.dart';
 
 class TabClipper extends CustomClipper<Path> {
   TabClipper({this.radius = 38.0});

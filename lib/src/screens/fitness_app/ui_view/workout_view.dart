@@ -1,5 +1,6 @@
-import 'package:ieatta/src/utils/hex_color.dart';
 import 'package:flutter/material.dart';
+import 'package:ieatta/src/utils/hex_color.dart';
+
 import '../fitness_app_theme.dart';
 
 class WorkoutView extends StatelessWidget {

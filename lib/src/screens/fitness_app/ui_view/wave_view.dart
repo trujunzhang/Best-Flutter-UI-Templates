@@ -1,6 +1,7 @@
 import 'dart:math' as math;
-import 'package:ieatta/src/screens/fitness_app/fitness_app_theme.dart';
+
 import 'package:flutter/material.dart';
+import 'package:ieatta/src/screens/fitness_app/fitness_app_theme.dart';
 import 'package:vector_math/vector_math.dart' as vector;
 
 class WaveView extends StatefulWidget {

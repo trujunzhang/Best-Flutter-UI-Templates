@@ -1,7 +1,7 @@
-import 'package:ieatta/src/screens/fitness_app/ui_view/wave_view.dart';
-import 'package:ieatta/src/screens/fitness_app/fitness_app_theme.dart';
-import 'package:ieatta/src/utils/hex_color.dart';
 import 'package:flutter/material.dart';
+import 'package:ieatta/src/screens/fitness_app/fitness_app_theme.dart';
+import 'package:ieatta/src/screens/fitness_app/ui_view/wave_view.dart';
+import 'package:ieatta/src/utils/hex_color.dart';
 
 class WaterView extends StatefulWidget {
   const WaterView(

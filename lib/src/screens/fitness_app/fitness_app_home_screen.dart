@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'bottom_navigation_view/bottom_bar_view.dart';
 import 'bottom_navigation_view/models/tabIcon_data.dart';
 import 'fitness_app_theme.dart';
@@ -14,7 +15,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
     with TickerProviderStateMixin {
   AnimationController animationController;
 
-  List<TabIconData> tabIconsList = TabIconData.resetTabIconsList();
+  List<TabIconData> tabIconsList = TabIconData.tabIconsList;
 
   Widget tabBody = Container(
     color: FitnessAppTheme.background,
@@ -22,6 +23,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
 
   @override
   void initState() {
+    tabIconsList = TabIconData.resetTabIconsList();
     animationController = AnimationController(
         duration: const Duration(milliseconds: 600), vsync: this);
     tabBody = MyDiaryScreen(animationController: animationController);
@@ -80,20 +82,17 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
   }
 
   changeIndex(int index) {
+    if (!mounted) {
+      return;
+    }
     if (index == 0 || index == 2) {
       animationController.reverse().then<dynamic>((data) {
-        if (!mounted) {
-          return;
-        }
         setState(() {
           tabBody = MyDiaryScreen(animationController: animationController);
         });
       });
     } else if (index == 1 || index == 3) {
       animationController.reverse().then<dynamic>((data) {
-        if (!mounted) {
-          return;
-        }
         setState(() {
           tabBody = TrainingScreen(animationController: animationController);
         });

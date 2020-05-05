@@ -1,5 +1,5 @@
-import 'package:ieatta/src/screens/fitness_app/fitness_app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:ieatta/src/screens/fitness_app/fitness_app_theme.dart';
 
 class BodyMeasurementView extends StatelessWidget {
   final AnimationController animationController;

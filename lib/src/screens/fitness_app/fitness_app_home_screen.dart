@@ -1,9 +1,9 @@
-import 'package:ieatta/src/screens/fitness_app/bottom_navigation_view/tabIcon_data.dart';
-import 'package:ieatta/src/screens/fitness_app/traning/training_screen.dart';
 import 'package:flutter/material.dart';
 import 'bottom_navigation_view/bottom_bar_view.dart';
+import 'bottom_navigation_view/tabIcon_data.dart';
 import 'fitness_app_theme.dart';
-import 'my_diary/my_diary_screen.dart';
+import 'tab_screens/my_diary/my_diary_screen.dart';
+import 'tab_screens/training/training_screen.dart';
 
 class FitnessAppHomeScreen extends StatefulWidget {
   @override

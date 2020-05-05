@@ -1,12 +1,12 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:ieatta/src/screens/hotel_booking/body/hotel_list_view.dart';
-import 'package:ieatta/src/screens/hotel_booking/model/hotel_list_data.dart';
 
+import 'body/hotel_list_view.dart';
 import 'body/page_body.dart';
 import 'contest_tab_header.dart';
 import 'hotel_app_theme.dart';
+import 'model/hotel_list_data.dart';
 import 'widget/app_bar_ui.dart';
 import 'widget/filter_bar_ui.dart';
 import 'widget/search_bar_ui.dart';

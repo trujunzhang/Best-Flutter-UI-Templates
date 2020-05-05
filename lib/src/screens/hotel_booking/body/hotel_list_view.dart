@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:ieatta/src/screens/hotel_booking/hotel_app_theme.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
+import '../hotel_app_theme.dart';
 import '../model/hotel_list_data.dart';
 
 class HotelListView extends StatelessWidget {

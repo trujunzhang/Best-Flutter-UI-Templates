@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'bottom_navigation_view/bottom_bar_view.dart';
-import 'bottom_navigation_view/tabIcon_data.dart';
+import 'bottom_navigation_view/models/tabIcon_data.dart';
 import 'fitness_app_theme.dart';
 import 'tab_screens/my_diary/my_diary_screen.dart';
 import 'tab_screens/training/training_screen.dart';
@@ -14,7 +14,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
     with TickerProviderStateMixin {
   AnimationController animationController;
 
-  List<TabIconData> tabIconsList = TabIconData.tabIconsList;
+  List<TabIconData> tabIconsList = TabIconData.resetTabIconsList();
 
   Widget tabBody = Container(
     color: FitnessAppTheme.background,
@@ -22,11 +22,6 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
 
   @override
   void initState() {
-    tabIconsList.forEach((TabIconData tab) {
-      tab.isSelected = false;
-    });
-    tabIconsList[0].isSelected = true;
-
     animationController = AnimationController(
         duration: const Duration(milliseconds: 600), vsync: this);
     tabBody = MyDiaryScreen(animationController: animationController);

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../fitness_app_theme.dart';
-import 'tabIcon_data.dart';
-import 'tab_clipper.dart';
-import 'tab_icons.dart';
+import '../../fitness_app_theme.dart';
+import '../models/tabIcon_data.dart';
+import '../widgets/tab_clipper.dart';
+import '../widgets/tab_icons.dart';
 
 class TabBg extends StatefulWidget {
   TabBg(

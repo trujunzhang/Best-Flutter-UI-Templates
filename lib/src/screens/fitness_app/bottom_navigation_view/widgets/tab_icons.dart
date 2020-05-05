@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ieatta/src/screens/fitness_app/bottom_navigation_view/tabIcon_data.dart';
+import 'package:ieatta/src/screens/fitness_app/bottom_navigation_view/models/tabIcon_data.dart';
 
-import '../fitness_app_theme.dart';
+import '../../fitness_app_theme.dart';
 
 class TabIcons extends StatefulWidget {
   const TabIcons({Key key, this.tabIconData, this.removeAllSelect})

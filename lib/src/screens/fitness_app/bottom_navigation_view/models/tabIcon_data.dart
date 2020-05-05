@@ -16,6 +16,15 @@ class TabIconData {
 
   AnimationController animationController;
 
+  static List<TabIconData> resetTabIconsList (){
+    List<TabIconData> list = tabIconsList;
+    list.forEach((TabIconData tab) {
+      tab.isSelected = false;
+    });
+    list[0].isSelected = true;
+    return list;
+  }
+
   static List<TabIconData> tabIconsList = <TabIconData>[
     TabIconData(
       imagePath: 'assets/fitness_app/tab_1.png',

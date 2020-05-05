@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ieatta/src/utils/hex_color.dart';
 
-import '../fitness_app_theme.dart';
+import '../../fitness_app_theme.dart';
 
 class TabFg extends StatefulWidget {
   TabFg({Key key, this.animationController, this.addClick}) : super(key: key);

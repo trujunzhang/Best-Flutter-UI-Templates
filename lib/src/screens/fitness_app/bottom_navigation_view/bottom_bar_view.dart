@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'tabIcon_data.dart';
-import 'tab_bg.dart';
-import 'tab_fg.dart';
+import 'models/tabIcon_data.dart';
+import 'tabs/tab_bg.dart';
+import 'tabs/tab_fg.dart';
 
 class BottomBarView extends StatefulWidget {
   const BottomBarView(

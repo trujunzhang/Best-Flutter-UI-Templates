@@ -43,6 +43,36 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
 
   @override
   Widget build(BuildContext context) {
+    var body = Expanded(
+      child: NestedScrollView(
+          controller: _scrollController,
+          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+            return <Widget>[
+              SliverList(
+                delegate: SliverChildBuilderDelegate(
+                    (BuildContext context, int index) {
+                  return Column(
+                    children: <Widget>[
+                      SearchBarUI(),
+//                      TimeDateUI(),
+                    ],
+                  );
+                }, childCount: 1),
+              ),
+              SliverPersistentHeader(
+                pinned: true,
+                floating: true,
+                delegate: ContestTabHeader(
+                  FilterBarUI(),
+                ),
+              ),
+            ];
+          },
+          body: PageBody(
+            hotelList: hotelList,
+            animationController: animationController,
+          )),
+    );
     return Theme(
       data: HotelAppTheme.buildLightTheme(),
       child: Container(
@@ -59,38 +89,8 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                 },
                 child: Column(
                   children: <Widget>[
-                    AppBarUI(),
-                    Expanded(
-                      child: NestedScrollView(
-                          controller: _scrollController,
-                          headerSliverBuilder:
-                              (BuildContext context, bool innerBoxIsScrolled) {
-                            return <Widget>[
-                              SliverList(
-                                delegate: SliverChildBuilderDelegate(
-                                    (BuildContext context, int index) {
-                                  return Column(
-                                    children: <Widget>[
-                                      SearchBarUI(),
-                                      TimeDateUI(),
-                                    ],
-                                  );
-                                }, childCount: 1),
-                              ),
-                              SliverPersistentHeader(
-                                pinned: true,
-                                floating: true,
-                                delegate: ContestTabHeader(
-                                  FilterBarUI(),
-                                ),
-                              ),
-                            ];
-                          },
-                          body: PageBody(
-                            hotelList: hotelList,
-                            animationController: animationController,
-                          )),
-                    )
+                    AppBarUI(), // top bar
+                    body // dody
                   ],
                 ),
               ),

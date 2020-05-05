@@ -1,9 +1,11 @@
 import 'dart:ui';
+
+import 'package:flutter/material.dart';
 import 'package:ieatta/src/screens/hotel_booking/body/hotel_list_view.dart';
 import 'package:ieatta/src/screens/hotel_booking/model/hotel_list_data.dart';
-import 'package:flutter/material.dart';
+
 import 'body/page_body.dart';
-import 'filter/filters_screen.dart';
+import 'contest_tab_header.dart';
 import 'hotel_app_theme.dart';
 import 'widget/app_bar_ui.dart';
 import 'widget/filter_bar_ui.dart';
@@ -175,30 +177,5 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
     return Column(
       children: hotelListViews,
     );
-  }
-}
-
-class ContestTabHeader extends SliverPersistentHeaderDelegate {
-  ContestTabHeader(
-    this.searchUI,
-  );
-
-  final Widget searchUI;
-
-  @override
-  Widget build(
-      BuildContext context, double shrinkOffset, bool overlapsContent) {
-    return searchUI;
-  }
-
-  @override
-  double get maxExtent => 52.0;
-
-  @override
-  double get minExtent => 52.0;
-
-  @override
-  bool shouldRebuild(SliverPersistentHeaderDelegate oldDelegate) {
-    return false;
   }
 }

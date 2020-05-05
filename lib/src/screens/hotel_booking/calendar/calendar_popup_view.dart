@@ -1,7 +1,7 @@
 import 'dart:ui';
 
-import 'package:ieatta/src/screens/hotel_booking/hotel_app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:ieatta/src/screens/hotel_booking/hotel_app_theme.dart';
 import 'package:intl/intl.dart';
 
 import 'custom_calendar.dart';

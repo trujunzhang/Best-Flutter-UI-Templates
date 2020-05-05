@@ -1,5 +1,5 @@
-import 'package:ieatta/src/screens/hotel_booking/model/hotel_list_data.dart';
 import 'package:flutter/material.dart';
+import 'package:ieatta/src/screens/hotel_booking/model/hotel_list_data.dart';
 
 import '../hotel_app_theme.dart';
 import 'hotel_list_view.dart';

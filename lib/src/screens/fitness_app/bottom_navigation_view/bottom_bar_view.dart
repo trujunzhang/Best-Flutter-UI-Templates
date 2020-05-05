@@ -1,10 +1,11 @@
-import 'dart:math' as math;
-import 'package:ieatta/src/screens/fitness_app/fintness_app_theme.dart';
+import 'package:ieatta/src/screens/fitness_app/fitness_app_theme.dart';
 import 'package:ieatta/src/screens/fitness_app/models/tabIcon_data.dart';
 import 'package:ieatta/src/utils/hex_color.dart';
 import 'package:flutter/material.dart';
 
 import '../models/tabIcon_data.dart';
+import 'tab_clipper.dart';
+import 'tab_icons.dart';
 
 class BottomBarView extends StatefulWidget {
   const BottomBarView(
@@ -44,7 +45,7 @@ class _BottomBarViewState extends State<BottomBarView>
             return Transform(
               transform: Matrix4.translationValues(0.0, 0.0, 0.0),
               child: PhysicalShape(
-                color: FintnessAppTheme.white,
+                color: FitnessAppTheme.white,
                 elevation: 16.0,
                 clipper: TabClipper(
                     radius: Tween<double>(begin: 0.0, end: 1.0)
@@ -143,10 +144,10 @@ class _BottomBarViewState extends State<BottomBarView>
                     child: Container(
                       // alignment: Alignment.center,s
                       decoration: BoxDecoration(
-                        color: FintnessAppTheme.nearlyDarkBlue,
+                        color: FitnessAppTheme.nearlyDarkBlue,
                         gradient: LinearGradient(
                             colors: [
-                              FintnessAppTheme.nearlyDarkBlue,
+                              FitnessAppTheme.nearlyDarkBlue,
                               HexColor('#6A88E5'),
                             ],
                             begin: Alignment.topLeft,
@@ -154,7 +155,7 @@ class _BottomBarViewState extends State<BottomBarView>
                         shape: BoxShape.circle,
                         boxShadow: <BoxShadow>[
                           BoxShadow(
-                              color: FintnessAppTheme.nearlyDarkBlue
+                              color: FitnessAppTheme.nearlyDarkBlue
                                   .withOpacity(0.4),
                               offset: const Offset(8.0, 16.0),
                               blurRadius: 16.0),
@@ -171,7 +172,7 @@ class _BottomBarViewState extends State<BottomBarView>
                           },
                           child: Icon(
                             Icons.add,
-                            color: FintnessAppTheme.white,
+                            color: FitnessAppTheme.white,
                             size: 32,
                           ),
                         ),
@@ -197,186 +198,5 @@ class _BottomBarViewState extends State<BottomBarView>
         }
       });
     });
-  }
-}
-
-class TabIcons extends StatefulWidget {
-  const TabIcons({Key key, this.tabIconData, this.removeAllSelect})
-      : super(key: key);
-
-  final TabIconData tabIconData;
-  final Function removeAllSelect;
-
-  @override
-  _TabIconsState createState() => _TabIconsState();
-}
-
-class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
-  @override
-  void initState() {
-    widget.tabIconData.animationController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 400),
-    )..addStatusListener((AnimationStatus status) {
-        if (status == AnimationStatus.completed) {
-          if (!mounted) return;
-          widget.removeAllSelect();
-          widget.tabIconData.animationController.reverse();
-        }
-      });
-    super.initState();
-  }
-
-  void setAnimation() {
-    widget.tabIconData.animationController.forward();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1,
-      child: Center(
-        child: InkWell(
-          splashColor: Colors.transparent,
-          focusColor: Colors.transparent,
-          highlightColor: Colors.transparent,
-          hoverColor: Colors.transparent,
-          onTap: () {
-            if (!widget.tabIconData.isSelected) {
-              setAnimation();
-            }
-          },
-          child: IgnorePointer(
-            child: Stack(
-              alignment: AlignmentDirectional.center,
-              children: <Widget>[
-                ScaleTransition(
-                  alignment: Alignment.center,
-                  scale: Tween<double>(begin: 0.88, end: 1.0).animate(
-                      CurvedAnimation(
-                          parent: widget.tabIconData.animationController,
-                          curve:
-                              Interval(0.1, 1.0, curve: Curves.fastOutSlowIn))),
-                  child: Image.asset(widget.tabIconData.isSelected
-                      ? widget.tabIconData.selectedImagePath
-                      : widget.tabIconData.imagePath),
-                ),
-                Positioned(
-                  top: 4,
-                  left: 6,
-                  right: 0,
-                  child: ScaleTransition(
-                    alignment: Alignment.center,
-                    scale: Tween<double>(begin: 0.0, end: 1.0).animate(
-                        CurvedAnimation(
-                            parent: widget.tabIconData.animationController,
-                            curve: Interval(0.2, 1.0,
-                                curve: Curves.fastOutSlowIn))),
-                    child: Container(
-                      width: 8,
-                      height: 8,
-                      decoration: BoxDecoration(
-                        color: FintnessAppTheme.nearlyDarkBlue,
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  top: 0,
-                  left: 6,
-                  bottom: 8,
-                  child: ScaleTransition(
-                    alignment: Alignment.center,
-                    scale: Tween<double>(begin: 0.0, end: 1.0).animate(
-                        CurvedAnimation(
-                            parent: widget.tabIconData.animationController,
-                            curve: Interval(0.5, 0.8,
-                                curve: Curves.fastOutSlowIn))),
-                    child: Container(
-                      width: 4,
-                      height: 4,
-                      decoration: BoxDecoration(
-                        color: FintnessAppTheme.nearlyDarkBlue,
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  top: 6,
-                  right: 8,
-                  bottom: 0,
-                  child: ScaleTransition(
-                    alignment: Alignment.center,
-                    scale: Tween<double>(begin: 0.0, end: 1.0).animate(
-                        CurvedAnimation(
-                            parent: widget.tabIconData.animationController,
-                            curve: Interval(0.5, 0.6,
-                                curve: Curves.fastOutSlowIn))),
-                    child: Container(
-                      width: 6,
-                      height: 6,
-                      decoration: BoxDecoration(
-                        color: FintnessAppTheme.nearlyDarkBlue,
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class TabClipper extends CustomClipper<Path> {
-  TabClipper({this.radius = 38.0});
-
-  final double radius;
-
-  @override
-  Path getClip(Size size) {
-    final Path path = Path();
-
-    final double v = radius * 2;
-    path.lineTo(0, 0);
-    path.arcTo(Rect.fromLTWH(0, 0, radius, radius), degreeToRadians(180),
-        degreeToRadians(90), false);
-    path.arcTo(
-        Rect.fromLTWH(
-            ((size.width / 2) - v / 2) - radius + v * 0.04, 0, radius, radius),
-        degreeToRadians(270),
-        degreeToRadians(70),
-        false);
-
-    path.arcTo(Rect.fromLTWH((size.width / 2) - v / 2, -v / 2, v, v),
-        degreeToRadians(160), degreeToRadians(-140), false);
-
-    path.arcTo(
-        Rect.fromLTWH((size.width - ((size.width / 2) - v / 2)) - v * 0.04, 0,
-            radius, radius),
-        degreeToRadians(200),
-        degreeToRadians(70),
-        false);
-    path.arcTo(Rect.fromLTWH(size.width - radius, 0, radius, radius),
-        degreeToRadians(270), degreeToRadians(90), false);
-    path.lineTo(size.width, 0);
-    path.lineTo(size.width, size.height);
-    path.lineTo(0, size.height);
-
-    path.close();
-    return path;
-  }
-
-  @override
-  bool shouldReclip(TabClipper oldClipper) => true;
-
-  double degreeToRadians(double degree) {
-    final double redian = (math.pi / 180) * degree;
-    return redian;
   }
 }

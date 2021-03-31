@@ -25,9 +25,9 @@ class _NavigationHomeScreenState extends State<NavigationHomeScreen> {
   void initState() {
     drawerIndex = DrawerIndex.HOME;
 //    screenView = MyHomePage();
-     screenView = HotelHomeScreen();
+//      screenView = HotelHomeScreen();
 //     screenView = FitnessAppHomeScreen();
-    //  screenView = DesignCourseHomeScreen();
+     screenView = DesignCourseHomeScreen();
 
     super.initState();
   }

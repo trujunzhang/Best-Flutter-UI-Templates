@@ -1,4 +1,4 @@
-# best_flutter_ui_templates
+# ieatta
 
 A new Flutter project.
 
